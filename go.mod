@@ -6,8 +6,9 @@ require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/go-resty/resty/v2 v2.7.0 // indirect
 	github.com/kr/pretty v0.1.0 // indirect
-	github.com/yedf/dtmcli v1.5.2-0.20211112063644-f6ca0f2056ff
-	golang.org/x/net v0.0.0-20211111160137-58aab5ef257a // indirect
+	github.com/yedf/dtmcli v1.6.0
+	github.com/yedf/dtmdriver v0.0.0-20211202092330-86dce681d5db
+	golang.org/x/net v0.0.0-20211201190559-0a0e4e1bb54c // indirect
 	golang.org/x/sys v0.0.0-20210806184541-e5e7981a1069 // indirect
 	golang.org/x/text v0.3.7 // indirect
 	google.golang.org/genproto v0.0.0-20210805201207-89edb61ffb67 // indirect
