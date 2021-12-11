@@ -3,12 +3,12 @@ module github.com/yedf/dtmgrpc
 go 1.15
 
 require (
-	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/go-resty/resty/v2 v2.7.0 // indirect
-	github.com/kr/pretty v0.1.0 // indirect
-	github.com/yedf/dtmcli v1.6.2
+	github.com/yedf/dtmcli v1.6.3-0.20211211074706-b88aba5dacbe
 	github.com/yedf/dtmdriver v0.0.0-20211202092330-86dce681d5db
-	golang.org/x/net v0.0.0-20211203184738-4852103109b8 // indirect
+	go.uber.org/atomic v1.9.0 // indirect
+	go.uber.org/multierr v1.7.0 // indirect
+	golang.org/x/net v0.0.0-20211209124913-491a49abca63 // indirect
 	golang.org/x/sys v0.0.0-20210806184541-e5e7981a1069 // indirect
 	golang.org/x/text v0.3.7 // indirect
 	google.golang.org/genproto v0.0.0-20210805201207-89edb61ffb67 // indirect
