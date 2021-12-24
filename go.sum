@@ -14,6 +14,10 @@ github.com/cncf/xds/go v0.0.0-20210805033703-aa0b78936158/go.mod h1:eXthEFrGJvWH
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
+github.com/dtm-labs/dtmcli v1.7.4 h1:kxpLq57IvSVTaXv6Wg06PE8/B2FXqiLGeQizRq0hU8w=
+github.com/dtm-labs/dtmcli v1.7.4/go.mod h1:RScM1n5706gorN5Lreett4YjNJckkj+RJm/ab3gjW2Y=
+github.com/dtm-labs/dtmdriver v0.0.1 h1:dHUZQ6g2ZN6eRUqds9kKq/3K7u9bcUGatUlbthD92fA=
+github.com/dtm-labs/dtmdriver v0.0.1/go.mod h1:fLiEeD2BPwM9Yq96TfcP9KpbTwFsn5nTxa/PP0jmFuk=
 github.com/envoyproxy/go-control-plane v0.9.0/go.mod h1:YTl/9mNaCwkRvm6d1a2C3ymFceY/DCBVvsKhRF0iEA4=
 github.com/envoyproxy/go-control-plane v0.9.1-0.20191026205805-5f8ba28d4473/go.mod h1:YTl/9mNaCwkRvm6d1a2C3ymFceY/DCBVvsKhRF0iEA4=
 github.com/envoyproxy/go-control-plane v0.9.4/go.mod h1:6rpuAdCZL397s3pYoYcLgu1mIlRU8Am5FuJP05cCM98=
@@ -67,10 +71,6 @@ github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UV
 github.com/stretchr/testify v1.5.1/go.mod h1:5W2xD1RspED5o8YsWQXVCued0rvSQ+mT+I5cxcmMvtA=
 github.com/stretchr/testify v1.7.0 h1:nwc3DEeHmmLAfoZucVR881uASk0Mfjw8xYJ99tb5CcY=
 github.com/stretchr/testify v1.7.0/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
-github.com/yedf/dtmcli v1.6.3-0.20211211074706-b88aba5dacbe h1:JY1x0RtdrZIANo4UxMt2t10+b5qt+3pwSqPSqitkfaU=
-github.com/yedf/dtmcli v1.6.3-0.20211211074706-b88aba5dacbe/go.mod h1:TEUbN4BiaZADdNWdTfSBaoaCwLj11a9PGkjcqOHeCTI=
-github.com/yedf/dtmdriver v0.0.0-20211202092330-86dce681d5db h1:Y8ZADMM3CGQ4k83FwOeDYTu7bkTGtkdboaJKhJ3HInk=
-github.com/yedf/dtmdriver v0.0.0-20211202092330-86dce681d5db/go.mod h1:aeo6ZWiVI0x8P8O18r6uB1cG2uw9BCQyYZaH15MlRDI=
 github.com/yuin/goldmark v1.3.5/go.mod h1:mwnBkeHKe2W/ZEtQ+71ViKU8L12m81fl3OWwC1Zlc8k=
 go.opentelemetry.io/proto/otlp v0.7.0/go.mod h1:PqfVotwruBrMGOCsRd/89rSnXhoiJIqeYNgFYFoEGnI=
 go.uber.org/atomic v1.7.0 h1:ADUqmZGgLDDfbSL9ZmPxKTybcoEYHgpYfELNoN+7hsw=

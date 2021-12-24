@@ -10,9 +10,10 @@ import (
 	context "context"
 	"fmt"
 
-	"github.com/yedf/dtmcli/dtmimp"
-	"github.com/yedf/dtmgrpc/dtmgimp"
-	"github.com/yedf/dtmdriver"
+	"github.com/dtm-labs/dtmcli/dtmimp"
+	"github.com/dtm-labs/dtmgrpc/dtmgimp"
+	"github.com/dtm-labs/dtmgrpc/dtmgpb"
+	"github.com/dtm-labs/dtmdriver"
 	"google.golang.org/protobuf/proto"
 )
 
@@ -31,7 +32,7 @@ type TccGlobalFunc func(tcc *TccGrpc) error
 func TccGlobalTransaction(dtm string, gid string, tccFunc TccGlobalFunc) (rerr error) {
 	tcc := &TccGrpc{TransBase: *dtmimp.NewTransBase(gid, "tcc", dtm, "")}
 	dc := dtmgimp.MustGetDtmClient(tcc.Dtm)
-	dr := &dtmgimp.DtmRequest{
+	dr := &dtmgpb.DtmRequest{
 		Gid:       tcc.Gid,
 		TransType: tcc.TransType,
 	}
@@ -72,7 +73,7 @@ func TccFromGrpc(ctx context.Context) (*TccGrpc, error) {
 func (t *TccGrpc) CallBranch(busiMsg proto.Message, tryURL string, confirmURL string, cancelURL string, reply interface{}) error {
 	branchID := t.NewSubBranchID()
 	bd, err := proto.Marshal(busiMsg)
-	_, err = dtmgimp.MustGetDtmClient(t.Dtm).RegisterBranch(context.Background(), &dtmgimp.DtmBranchRequest{
+	_, err = dtmgimp.MustGetDtmClient(t.Dtm).RegisterBranch(context.Background(), &dtmgpb.DtmBranchRequest{
 		Gid:         t.Gid,
 		TransType:   t.TransType,
 		BranchID:    branchID,

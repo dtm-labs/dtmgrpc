@@ -9,10 +9,10 @@ package dtmgrpc
 import (
 	context "context"
 
-	"github.com/yedf/dtmcli"
-	"github.com/yedf/dtmcli/dtmimp"
-	"github.com/yedf/dtmgrpc/dtmgimp"
-	"github.com/yedf/dtmdriver"
+	"github.com/dtm-labs/dtmcli"
+	"github.com/dtm-labs/dtmcli/dtmimp"
+	"github.com/dtm-labs/dtmgrpc/dtmgimp"
+	"github.com/dtm-labs/dtmdriver"
 	emptypb "google.golang.org/protobuf/types/known/emptypb"
 )
 

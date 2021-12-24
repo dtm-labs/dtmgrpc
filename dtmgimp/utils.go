@@ -9,7 +9,9 @@ package dtmgimp
 import (
 	context "context"
 
-	"github.com/yedf/dtmcli/dtmimp"
+	"github.com/dtm-labs/dtmcli/dtmimp"
+	"github.com/dtm-labs/dtmcli/logger"
+	"github.com/dtm-labs/dtmgrpc/dtmgpb"
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/protobuf/proto"
 	emptypb "google.golang.org/protobuf/types/known/emptypb"
@@ -25,10 +27,10 @@ func MustProtoMarshal(msg proto.Message) []byte {
 // DtmGrpcCall make a convenient call to dtm
 func DtmGrpcCall(s *dtmimp.TransBase, operation string) error {
 	reply := emptypb.Empty{}
-	return MustGetGrpcConn(s.Dtm, false).Invoke(context.Background(), "/dtmgimp.Dtm/"+operation, &DtmRequest{
+	return MustGetGrpcConn(s.Dtm, false).Invoke(context.Background(), "/dtmgimp.Dtm/"+operation, &dtmgpb.DtmRequest{
 		Gid:       s.Gid,
 		TransType: s.TransType,
-		TransOptions: &DtmTransOptions{
+		TransOptions: &dtmgpb.DtmTransOptions{
 			WaitResult:    s.WaitResult,
 			TimeoutToFail: s.TimeoutToFail,
 			RetryInterval: s.RetryInterval,
@@ -58,7 +60,7 @@ func TransInfo2Ctx(gid, transType, branchID, op, dtm string) context.Context {
 func LogDtmCtx(ctx context.Context) {
 	tb := TransBaseFromGrpc(ctx)
 	if tb.Gid != "" {
-		dtmimp.Logf("gid: %s trans_type: %s branch_id: %s op: %s dtm: %s", tb.Gid, tb.TransType, tb.BranchID, tb.Op, tb.Dtm)
+		logger.Debugf("gid: %s trans_type: %s branch_id: %s op: %s dtm: %s", tb.Gid, tb.TransType, tb.BranchID, tb.Op, tb.Dtm)
 	}
 }
 
