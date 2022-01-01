@@ -19,6 +19,7 @@ message DtmTransOptions {
   int64 TimeoutToFail = 2;
   int64 RetryInterval = 3;
   repeated string PassthroughHeaders = 4;
+  map<string, string> BranchHeaders = 5;
 }
 
 // DtmRequest request sent to dtm server

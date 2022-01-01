@@ -35,6 +35,7 @@ func DtmGrpcCall(s *dtmimp.TransBase, operation string) error {
 			TimeoutToFail:      s.TimeoutToFail,
 			RetryInterval:      s.RetryInterval,
 			PassthroughHeaders: s.PassthroughHeaders,
+			BranchHeaders:      s.BranchHeaders,
 		},
 		QueryPrepared: s.QueryPrepared,
 		CustomedData:  s.CustomData,
@@ -55,6 +56,15 @@ func TransInfo2Ctx(gid, transType, branchID, op, dtm string) context.Context {
 		dtmpre+"dtm", dtm,
 	)
 	return metadata.NewOutgoingContext(context.Background(), md)
+}
+
+// Map2Kvs map to metadata kv
+func Map2Kvs(m map[string]string) []string {
+	kvs := []string{}
+	for k, v := range m {
+		kvs = append(kvs, k, v)
+	}
+	return kvs
 }
 
 // LogDtmCtx logout dtm info in context metadata
