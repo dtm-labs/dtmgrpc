@@ -37,12 +37,12 @@ func (s *SagaGrpc) AddBranchOrder(branch int, preBranches []int) *SagaGrpc {
 
 // EnableConcurrent enable the concurrent exec of sub trans
 func (s *SagaGrpc) EnableConcurrent() *SagaGrpc {
-	s.Saga.EnableConcurrent()
+	s.Saga.SetConcurrent()
 	return s
 }
 
 // Submit submit the saga trans
 func (s *SagaGrpc) Submit() error {
-	s.Saga.AddConcurrentContext()
+	s.Saga.BuildCustomOptions()
 	return dtmgimp.DtmGrpcCall(&s.Saga.TransBase, "Submit")
 }
